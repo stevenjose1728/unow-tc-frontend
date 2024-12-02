@@ -1,46 +1,88 @@
-# Getting Started with Create React App
+# Frontend - Sistema de Gestión de Empleados
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Sistema de gestión de empleados desarrollado en React con TypeScript, implementando las mejores prácticas de desarrollo y un diseño moderno con Tailwind CSS.
 
-## Available Scripts
+## Tecnologías Principales
 
-In the project directory, you can run:
+- React 18 con TypeScript
+- Redux + Redux Persist
+- React Hook Form con Zod
+- Tailwind CSS
+- Axios
 
-### `npm start`
+## Instalación
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+1. Clona el repositorio:
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+```bash
+git clone
+```
 
-### `npm test`
+2. Instala las dependencias:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```bash
+npm install
+```
 
-### `npm run build`
+3. Configura las variables de entorno:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```bash
+cp .env.example .env
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```env
+REACT_APP_API_URL=http://localhost:8000/api
+REACT_APP_JOBS_API_URL=https://ibillboard.com/api/positions
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+4. Inicia el proyecto:
 
-### `npm run eject`
+```bash
+npm start
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Estructura del Proyecto
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```
+src/
+  ├── models/          # Interfaces y tipos de datos
+  ├── hooks/           # Hooks personalizados
+  ├── guards/           # Check de sesion y permisos
+  ├── layouts/
+  ├── routes/         # Rutas para react-router
+  ├── services/        # Servicios para API
+  ├── store/            # Config y slices de Redux
+  ├── pages/            # Páginas principales
+  └── components/       # Componentes reutilizables
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Funcionalidades
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+- Autenticación con JWT
+- Gestión de usuarios (CRUD)
+- Perfil de usuario
+- Búsqueda y paginación
+- Validaciones de formularios
+- Estado persistente
 
-## Learn More
+## Comandos Disponibles
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```bash
+npm start     # Inicia el servidor de desarrollo
+npm build     # Construye la aplicación para producción
+npm test      # Ejecuta los tests
+npm run lint  # Ejecuta el linter
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Buenas Prácticas Implementadas
+
+- TypeScript para tipado estático
+- Hooks personalizados para lógica reutilizable
+- Validación de formularios con Zod
+- Manejo centralizado del estado con Redux
+- Interceptores de Axios para tokens
+- Diseño responsive con Tailwind
+
+## Autor
+
+Steven Varela - Desarrollador Frontend Senior
